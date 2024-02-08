@@ -20,15 +20,15 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <div className="h-screen p-2">
-          <div className="main h-[90%] rounded-lg flex">
-            <div className="secondary w-[23%] mr-2 rounded-lg bg-[#121212]">
+          <div className="main h-[90%] rounded-lg flex gap-2">
+            <div className="secondary w-[23%]">
               <Navigation />
             </div>
             <div className="primary w-[77%] rounded-lg bg-[#121212]">
               {children}
             </div>
           </div>
-          <div className="footer flex justify-between pl-[15px] pt-[11px] pb-[7px] pr-[24px] bg-red-700 h-[9%] mt-2 bg-gradient-to-r from-[#af2896] to-[#509bf5]">
+          <div className="footer flex justify-between pl-[15px] pt-[11px] pb-[7px] pr-[24px] bg-red-700 h-[9%] mt-2 bg-gradient-to-r from-[#af2896] to-[#509bf5] text-[14px]">
             <div className="mt-1">
               <p className="font-bold text-sm">Preview of Spotify</p>
               <p>
