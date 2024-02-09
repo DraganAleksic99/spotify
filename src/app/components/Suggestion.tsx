@@ -6,7 +6,7 @@ type Props = {
 
 export default function Suggestion({ title, subtitle, buttonText }: Props) {
   return (
-    <div className="px-2 pb-4">
+    <div className="px-2 pb-2">
       <div className="my-2 px-5 py-4 bg-[#242424] rounded-lg flex flex-col gap-5">
         <div className="h-[50px]">
           <div className="flex flex-col gap-2">

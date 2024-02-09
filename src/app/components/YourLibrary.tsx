@@ -13,7 +13,7 @@ export default function YourLibrary() {
   };
 
   return (
-    <section className="bg-[#121212] mt-2 rounded-lg">
+    <section className="bg-[#121212] mt-2 rounded-t-lg">
       <header className=" px-4 py-2 relative z-10">
         <div className="h-10 flex justify-between items-center text-[#b3b3b3] font-bold">
           <span className="px-2 py-1">

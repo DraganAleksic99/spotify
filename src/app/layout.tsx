@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Navigation from "./components/Navigation";
 import YourLibrary from "./components/YourLibrary";
+import LeftsideFooter from "./components/LeftsideFooter";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -25,12 +26,13 @@ export default function RootLayout({
             <div className="secondary w-[23%] h-full">
               <Navigation />
               <YourLibrary />
+              <LeftsideFooter />
             </div>
             <div className="primary w-[77%] rounded-lg bg-[#121212]">
               {children}
             </div>
           </div>
-          <div className="footer flex justify-between pl-[15px] py-2 pr-[24px] bg-red-700 h-[9%] mt-2 bg-gradient-to-r from-[#af2896] to-[#509bf5] text-[14px]">
+          <div className="flex justify-between pl-[15px] py-2 pr-[24px] bg-red-700 h-[9%] mt-2 bg-gradient-to-r from-[#af2896] to-[#509bf5] text-[14px]">
             <div className="mt-1">
               <p className="font-bold">Preview of Spotify</p>
               <p className="text-base">
