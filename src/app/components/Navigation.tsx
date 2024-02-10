@@ -1,6 +1,11 @@
+"use client";
+
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 export default function Navigation() {
+  const path = usePathname();
+
   return (
     <nav className="rounded-lg bg-[#121212]">
       <div className="px-6 pt-5">
@@ -19,28 +24,32 @@ export default function Navigation() {
         </Link>
       </div>
       <ul className="text-[#b3b3b3] font-bold py-2 px-3 flex flex-col justify-start ">
-        <li className="px-3 py-1">
+        <li
+          className={`px-3 py-1 hover:text-white ${path === "/" ? "text-white" : ""} transition-colors`}
+        >
           <Link href="/" className="h-10 flex items-center">
             <svg
               className="w-6 h-6 inline-block"
               role="img"
               aria-hidden="true"
               viewBox="0 0 24 24"
-              fill="#b3b3b3"
+              fill={`${path === "/" ? "white" : "#b3b3b3"}`}
             >
               <path d="M12.5 3.247a1 1 0 0 0-1 0L4 7.577V20h4.5v-6a1 1 0 0 1 1-1h5a1 1 0 0 1 1 1v6H20V7.577l-7.5-4.33zm-2-1.732a3 3 0 0 1 3 0l7.5 4.33a2 2 0 0 1 1 1.732V21a1 1 0 0 1-1 1h-6.5a1 1 0 0 1-1-1v-6h-3v6a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V7.577a2 2 0 0 1 1-1.732l7.5-4.33z"></path>
             </svg>
             <span className="ml-5">Home</span>
           </Link>
         </li>
-        <li className="px-3 py-1">
+        <li
+          className={`px-3 py-1 hover:text-white ${path === "/search" ? "text-white" : ""} transition-colors`}
+        >
           <Link href="/search" className="h-10 flex items-center">
             <svg
               role="img"
               aria-hidden="true"
               className="w-6 h-6 inline-block"
               viewBox="0 0 24 24"
-              fill="#b3b3b3"
+              fill={`${path === "/search" ? "white" : "#b3b3b3"}`}
             >
               <svg
                 width="24"
